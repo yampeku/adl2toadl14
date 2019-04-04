@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>es.veratech</groupId>
+  <artifactId>adl2converter</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>adl2converter</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>com.nedap.healthcare.archie</groupId>
+  		<artifactId>archie-all</artifactId>
+   	 	<version>0.6.1</version>
+	</dependency>
+	<dependency>
+  <groupId>org.openehr.java-libs</groupId>
+  <artifactId>openehr-aom</artifactId>
+  <version>1.0.71</version>
+</dependency>
+	<dependency>
+  <groupId>org.openehr.java-libs</groupId>
+  <artifactId>openehr-rm-core</artifactId>
+  <version>1.0.71</version>
+</dependency>
+<dependency>
+  <groupId>org.openehr.java-libs</groupId>
+  <artifactId>adl-serializer</artifactId>
+  <version>1.0.71</version>
+</dependency>
+<dependency>
+  <groupId>org.openehr.java-libs</groupId>
+  <artifactId>mini-termserv</artifactId>
+  <version>1.0.71</version>
+</dependency>
+
+
+  </dependencies>
+  
+  
+</project>
