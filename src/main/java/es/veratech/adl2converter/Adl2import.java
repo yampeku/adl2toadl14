@@ -49,6 +49,7 @@ import org.openehr.terminology.SimpleTerminologyService;
 import org.openehr.referencemodels.BuiltinReferenceModels;
 
 import com.nedap.archie.ArchieLanguageConfiguration;
+import com.nedap.archie.adlparser.ADLParseException;
 import com.nedap.archie.adlparser.ADLParser;
 import com.nedap.archie.aom.Archetype;
 import com.nedap.archie.aom.ArchetypeSlot;
@@ -96,7 +97,13 @@ public class Adl2import
     	ArchieRMInfoLookup lookup = ArchieRMInfoLookup.getInstance();
         //String path="c:/temp/arch/openEHR-EHR-EVALUATION.mixed_aom_node_types.v1.0.0.adls";
     	String path="c:/temp/arch/openehr-TEST_PKG-WHOLE.primitive_types.v1.0.0.adls";
-    	Archetype arch = adl2import.parseArch(new File(path));
+    	Archetype arch;
+    	try {
+    		arch = adl2import.parseArch(new File(path));
+    	} catch (ADLParseException e) {
+    		e.printStackTrace();
+    		return;
+    	}
     	adl2import.setArch2(arch);
     	ArchieLanguageConfiguration.setDefaultMeaningAndDescriptionLanguage("en");
     	org.openehr.am.archetype.Archetype arch14;
@@ -614,7 +621,7 @@ public class Adl2import
 
 
 
-	public Archetype parseArch(File adlFile){
+	public Archetype parseArch(File adlFile) throws ADLParseException{
     	ADLParser parser = new ADLParser();
     	try {
 			Archetype archetype = parser.parse(FileUtils.readFileToString(adlFile,"UTF-8"));
