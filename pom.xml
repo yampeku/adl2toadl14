@@ -11,6 +11,8 @@
   <url>http://maven.apache.org</url>
 
   <properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -24,31 +26,29 @@
     <dependency>
     	<groupId>com.nedap.healthcare.archie</groupId>
   		<artifactId>archie-all</artifactId>
-   	 	<version>0.6.1</version>
-	</dependency>
-	<dependency>
-  <groupId>org.openehr.java-libs</groupId>
-  <artifactId>openehr-aom</artifactId>
-  <version>1.0.71</version>
-</dependency>
-	<dependency>
-  <groupId>org.openehr.java-libs</groupId>
-  <artifactId>openehr-rm-core</artifactId>
-  <version>1.0.71</version>
-</dependency>
-<dependency>
-  <groupId>org.openehr.java-libs</groupId>
-  <artifactId>adl-serializer</artifactId>
-  <version>1.0.71</version>
-</dependency>
-<dependency>
-  <groupId>org.openehr.java-libs</groupId>
-  <artifactId>mini-termserv</artifactId>
-  <version>1.0.71</version>
-</dependency>
-
+   	 	<version>1.0.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openehr.java-libs</groupId>
+      <artifactId>openehr-aom</artifactId>
+      <version>1.0.71</version>
+    </dependency>
+      <dependency>
+      <groupId>org.openehr.java-libs</groupId>
+      <artifactId>openehr-rm-core</artifactId>
+      <version>1.0.71</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openehr.java-libs</groupId>
+      <artifactId>adl-serializer</artifactId>
+      <version>1.0.71</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openehr.java-libs</groupId>
+      <artifactId>mini-termserv</artifactId>
+      <version>1.0.71</version>
+    </dependency>
 
   </dependencies>
-  
-  
+
 </project>
